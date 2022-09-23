@@ -1,10 +1,10 @@
 from tkinter import filedialog
 import pickle #remove this line when implementing
-StripMeDaddy=pickle.load(open("c:\\Users\\david\\Downloads\\pickle.pkl",'rb')) #set StripMeDaddy as your contract string
+StripThis=pickle.load(open("c:\\Users\\david\\Downloads\\pickle.pkl",'rb')) #set StripThis as your contract string
 ContractLanguage='.sol' #I guess pass the language through here? Takes input ".vy", ".rs", or ".sol"
 
-def StripSolContract(StripMeDaddy):
-    file=StripMeDaddy
+def StripSolContract(StripThis):
+    file=StripThis
     LineList=[]
     for line in file.splitlines():
         TestLine=line.replace(" ","")
@@ -19,8 +19,8 @@ def StripSolContract(StripMeDaddy):
             LineList.append(AppendThis)   
     return LineList
 
-def StripVyContract(StripMeDaddy):
-    file=StripMeDaddy
+def StripVyContract(StripThis):
+    file=StripThis
     LineList=[]
     SkipThisLine=False
     for line in file.splitlines():
